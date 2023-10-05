@@ -3,9 +3,11 @@ import { useSelector } from 'react-redux/es/hooks/useSelector';
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
-  if (!isMenuOpen) {
+  if (window.innerWidth < 800) {
+    return;
+  } else if (!isMenuOpen) {
     return (
-      <div className='w-20 p-4 border-r text-xs flex flex-col justify-center items-center'>
+      <div className='w-20 p-4 pt-0 text-xs flex flex-col justify-center items-center'>
         <div className='flex flex-col justify-center items-center'>
           <img
             className='h-8 mx-auto my-2 '
@@ -42,7 +44,7 @@ const Sidebar = () => {
     );
   }
   return (
-    <div className='w-60 border-r text-sm p-4'>
+    <div className='w-60 text-sm p-4 pt-0 '>
       <div className='flex items-center p-2'>
         <img
           className='h-8 mr-5'
