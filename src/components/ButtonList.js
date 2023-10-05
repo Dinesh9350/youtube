@@ -17,7 +17,7 @@ const names = [
 ];
 const ButtonList = () => {
   return (
-    <div className='flex mx-5 px-5'>
+    <div className='flex px-5'>
       {names.map((name) => {
         return <Button name={name} />;
       })}
