@@ -7,14 +7,14 @@ const Sidebar = () => {
     return;
   } else if (isMenuOpen) {
     return (
-      <div className='w-80 text-sm p-4 pt-0 hidden sm:block '>
+      <div className='text-sm p-4 pt-0 hidden sm:block '>
         <div className='flex items-center p-2'>
           <img
             className='h-8 mr-5'
             src='https://th.bing.com/th/id/OIP.O23pWqRhxVaXwaMtN1j9vQHaHa?pid=ImgDet&rs=1'
             alt='home'
           />
-          <h3>Home</h3>
+          <h3 className='w-40'>Home</h3>
         </div>
         <div className='flex items-center p-2 '>
           <img
@@ -62,7 +62,7 @@ const Sidebar = () => {
             src='https://static.thenounproject.com/png/1788272-200.png'
             alt='watch later'
           />
-          <h3>Watch Later</h3>
+          <h3 className=''>Watch Later</h3>
         </div>
       </div>
     );
