@@ -14,7 +14,7 @@ const VideoContainer = () => {
     fetchData();
   }, []);
   return (
-    <div className='flex justify-center sm:justify-start items-start flex-wrap'>
+    <div className='flex justify-center sm:justify-center items-start flex-wrap mt-5'>
       {videos?.map((video) => (
         <VideoCard info={video} />
       ))}
