@@ -9,6 +9,9 @@ const appSlice = createSlice({
     toggleMenu: (state) => {
       state.isMenuOpen = !state.isMenuOpen;
     },
+    // videoCardWidth: (state, action) => {
+    //   state.isMenuOpen 
+    // }
   },
 });
 

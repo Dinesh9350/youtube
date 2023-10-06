@@ -9,7 +9,7 @@ const Header = () => {
       <div className='flex items-center col-span-2'>
         <img
           onClick={() => dispatch(toggleMenu())}
-          className='h-8 mr-5 cursor-pointer'
+          className='h-8 mr-5 cursor-pointer hidden sm:block'
           src='https://cdn.iconscout.com/icon/free/png-512/free-hamburger-menu-462145.png?f=webp&w=256'
           alt='hambruger menu'
         />
@@ -20,7 +20,7 @@ const Header = () => {
         />
       </div>
       <div className='md:col-span-10 sm:col-span-4 hidden sm:block'>
-        <div className='lg:max-pl-48  md:max-pl-24 flex text-center items-center'>
+        <div className='lg:pl-40  md:pl-24 flex text-center items-center'>
           <input
             className='w-1/2 px-5 py-2 rounded-l-full border border-gray-300 '
             type='text'
