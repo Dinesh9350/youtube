@@ -1,21 +1,22 @@
 import React from 'react';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
-  if (window.innerWidth < 768) {
-    return;
-  } else if (isMenuOpen) {
+  if (isMenuOpen && window.innerWidth > 768) {
     return (
-      <div className='text-sm p-4 pt-0 hidden sm:block '>
-        <div className='flex items-center p-2'>
-          <img
-            className='h-8 mr-5'
-            src='https://th.bing.com/th/id/OIP.O23pWqRhxVaXwaMtN1j9vQHaHa?pid=ImgDet&rs=1'
-            alt='home'
-          />
-          <h3 className='w-40'>Home</h3>
-        </div>
+      <div className='text-sm p-4 pt-0 hidden lg:block '>
+        <Link to='/'>
+          <div className='flex items-center p-2'>
+            <img
+              className='h-8 mr-5'
+              src='https://th.bing.com/th/id/OIP.O23pWqRhxVaXwaMtN1j9vQHaHa?pid=ImgDet&rs=1'
+              alt='home'
+            />
+            <h3 className='w-40 '>Home</h3>
+          </div>
+        </Link>
         <div className='flex items-center p-2 '>
           <img
             className='h-8 mr-5'
@@ -68,15 +69,17 @@ const Sidebar = () => {
     );
   }
   return (
-    <div className='w-20 p-4 pt-0 text-xs flex flex-col  items-center'>
-      <div className='flex flex-col justify-center items-center'>
-        <img
-          className='h-8 mx-auto my-2 '
-          src='https://th.bing.com/th/id/OIP.O23pWqRhxVaXwaMtN1j9vQHaHa?pid=ImgDet&rs=1'
-          alt='home'
-        />
-        <h3>Home</h3>
-      </div>
+    <div className='w-20 p-4 pt-0 text-xs flex flex-col items-center hidden md:block'>
+      <Link to='/'>
+        <div className='flex flex-col justify-center items-center'>
+          <img
+            className='h-8 mx-auto my-2 '
+            src='https://th.bing.com/th/id/OIP.O23pWqRhxVaXwaMtN1j9vQHaHa?pid=ImgDet&rs=1'
+            alt='home'
+          />
+          <h3>Home</h3>
+        </div>
+      </Link>
       <div className='flex flex-col justify-center items-center'>
         <img
           className='h-8 mx-auto my-2 '

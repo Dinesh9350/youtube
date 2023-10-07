@@ -14,10 +14,11 @@ const names = [
   'Gaming',
   'Music',
   'Android',
+  'Death Note',
 ];
 const ButtonList = () => {
   return (
-    <div className='flex px-2 sm:px-0  lg:justify-center '>
+    <div className='flex mx-2 sm:px-0 xl:justify-center  '>
       {names.map((name) => {
         return <Button name={name} />;
       })}
