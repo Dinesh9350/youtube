@@ -11,10 +11,10 @@ const names = [
   'Redux',
   'Tailwind',
   'Javascript',
+  'Nodejs',
   'Gaming',
   'Music',
   'Android',
-  'Death Note',
 ];
 const ButtonList = () => {
   return (
