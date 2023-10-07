@@ -33,9 +33,9 @@ const WatchPage = () => {
             ></iframe>
           ) : (
             <iframe
-              className='sm:rounded-lg aspect-video'
-              width='500'
-              height='300'
+              className='sm:rounded-lg aspect-video '
+              width='450'
+              height='255'
               src={
                 'https://www.youtube.com/embed/' +
                 search +
