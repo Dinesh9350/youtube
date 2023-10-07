@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { YT_VIDEO_API } from '../utils/constants';
 import VideoCard from './VideoCard';
 import { Link } from 'react-router-dom';
+import useVideos from '../utils/useVideos';
 
 const VideoContainer = () => {
-  const [videos, setVideos] = useState();
+  const { videos, setVideos } = useVideos();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(YT_VIDEO_API);
-      const json = await response.json();
-      setVideos(json?.items);
-      console.log(json?.items);
-    };
-    fetchData();
-  }, []);
   return (
     <div className='flex justify-center items-start flex-wrap sm:mt-5'>
       {videos?.map((video) => (

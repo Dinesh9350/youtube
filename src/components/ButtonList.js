@@ -18,7 +18,7 @@ const names = [
 ];
 const ButtonList = () => {
   return (
-    <div className='flex mx-2 sm:px-0 xl:justify-center  '>
+    <div className='flex mx-2 sm:px-0 xl:justify-center overflow-scroll'>
       {names.map((name, index) => {
         return <Button key={index} name={name} />;
       })}

@@ -3,8 +3,10 @@ import { useSearchParams } from 'react-router-dom';
 import { closeMenu } from '../utils/appSlice';
 import { useDispatch } from 'react-redux';
 import Recommendation from './Recommendation';
+import useVideos from '../utils/useVideos';
 
 const WatchPage = () => {
+  const { videos } = useVideos();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeMenu());
@@ -33,9 +35,9 @@ const WatchPage = () => {
             ></iframe>
           ) : (
             <iframe
-              className='sm:rounded-lg aspect-video '
-              width='450'
-              height='255'
+              className='sm:rounded-lg '
+              width='500'
+              height='280'
               src={
                 'https://www.youtube.com/embed/' +
                 search +
@@ -49,14 +51,9 @@ const WatchPage = () => {
           )}
         </div>
         <div className=''>
-          <Recommendation />
-          <Recommendation />
-          <Recommendation />
-          <Recommendation />
-          <Recommendation />
-          <Recommendation />
-          <Recommendation />
-          <Recommendation />
+          {videos?.map((video) => {
+            return <Recommendation info={video} />;
+          })}
         </div>
       </div>
       <div className='my-5'>comments</div>

@@ -1,26 +1,25 @@
 import React from 'react';
 
-const Recommendation = () => {
-  const img = 'https://i.ytimg.com/vi/X8PtFxXxa5k/maxresdefault.jpg';
+const Recommendation = ({ info }) => {
+  const { snippet, statistics } = info;
+  const { channelTitle, title, thumbnails } = snippet;
+  console.log(thumbnails);
   return (
     <div className='w-100 mx-5 mt-5 lg:mt-0 mb-3'>
-      <div className='flex items-center lg:justify-between rounded-xl'>
+      <div className='flex items-center rounded-xl'>
         <div className=''>
           <img
-            className='w-40 object-cover rounded-xl border z-0'
-            src={img}
+            className='w-64 object-cover rounded-xl border z-0'
+            src={thumbnails.maxres?.url}
             loading='lazy'
             alt='img'
           />
         </div>
-        <div className='px-2'>
-          <h3 className='font-bold'>fdfd</h3>
-          <h3>fdfdf</h3>
+        <div className='px-2 w-full'>
+          <h3 className='font-bold'>{title}</h3>
+          <h3 className='text-xs text-gray-600 flex-wrap'>{channelTitle}</h3>
           <h3 className='text-xs text-gray-600 flex-wrap'>
-            fdfd
-          </h3>
-          <h3 className='text-xs text-gray-600 flex-wrap'>
-            fdfdf
+            {statistics.viewCount}
           </h3>
         </div>
       </div>
