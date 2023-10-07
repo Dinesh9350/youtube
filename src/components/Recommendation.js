@@ -6,17 +6,19 @@ const Recommendation = ({ info }) => {
   console.log(thumbnails);
   return (
     <div className=' mx-5 mt-5 lg:mt-0 mb-3'>
-      <div className='flex items-center rounded-xl'>
+      <div className='flex items-center rounded-xl w-full'>
         <div className=''>
           <img
-            className='w-64 object-cover rounded-xl border z-0'
+            className='w-52 object-cover rounded-xl border z-0'
             src={thumbnails.maxres?.url}
             loading='lazy'
             alt='img'
           />
         </div>
-        <div className='px-2 w-96'>
-          <h3 className='font-bold'>{title}</h3>
+        <div className='px-2 w-64 md:w-96'>
+          <h3 className='font-bold overflow-hidden overflow-ellipsis whitespace-nowrap'>
+            {title}
+          </h3>
           <h3 className='text-xs text-gray-600 flex-wrap'>{channelTitle}</h3>
           <h3 className='text-xs text-gray-600 flex-wrap'>
             {statistics.viewCount}
