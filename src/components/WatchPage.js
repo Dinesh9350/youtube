@@ -15,12 +15,12 @@ const WatchPage = () => {
   const search = searchParams.get('v');
 
   return (
-    <div className='p-0 xl:p-5'>
-      <div className='xl:flex'>
-        <div className=''>
-          {window.innerWidth > 500 ? (
+    <div className='p-0 xl:p-5 w-full'>
+      <div className='xl:flex items-start'>
+        <div className='container w-6/12'>
+          {window.innerWidth > 1000 ? (
             <iframe
-              className='rounded-lg aspect-video'
+              className='rounded-lg absolute top-0 '
               width='900'
               height='500'
               src={
@@ -35,9 +35,7 @@ const WatchPage = () => {
             ></iframe>
           ) : (
             <iframe
-              className='sm:rounded-lg '
-              width='500'
-              height='280'
+              className='sm:rounded-lg responsive-iframe '
               src={
                 'https://www.youtube.com/embed/' +
                 search +
@@ -50,7 +48,7 @@ const WatchPage = () => {
             ></iframe>
           )}
         </div>
-        <div className=''>
+        <div className='xl:w-7/12'>
           {videos?.map((video) => {
             return <Recommendation info={video} />;
           })}

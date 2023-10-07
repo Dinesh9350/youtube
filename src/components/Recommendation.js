@@ -5,7 +5,7 @@ const Recommendation = ({ info }) => {
   const { channelTitle, title, thumbnails } = snippet;
   console.log(thumbnails);
   return (
-    <div className='w-100 mx-5 mt-5 lg:mt-0 mb-3'>
+    <div className=' mx-5 mt-5 lg:mt-0 mb-3'>
       <div className='flex items-center rounded-xl'>
         <div className=''>
           <img
@@ -15,7 +15,7 @@ const Recommendation = ({ info }) => {
             alt='img'
           />
         </div>
-        <div className='px-2 w-full'>
+        <div className='px-2 w-96'>
           <h3 className='font-bold'>{title}</h3>
           <h3 className='text-xs text-gray-600 flex-wrap'>{channelTitle}</h3>
           <h3 className='text-xs text-gray-600 flex-wrap'>
