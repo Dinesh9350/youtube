@@ -17,7 +17,7 @@ const WatchPage = () => {
   return (
     <div className='p-0 xl:p-5 w-full'>
       <div className='xl:flex items-start'>
-        <div className='container w-6/12'>
+        <div className='container w-9/12'>
           {window.innerWidth > 1000 ? (
             <iframe
               className='rounded-lg absolute top-0 '

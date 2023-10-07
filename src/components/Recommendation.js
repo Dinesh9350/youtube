@@ -9,13 +9,13 @@ const Recommendation = ({ info }) => {
       <div className='flex items-center rounded-xl w-full'>
         <div className=''>
           <img
-            className='w-52 object-cover rounded-xl border z-0'
+            className='w-48 lg:w-44 rounded-xl'
             src={thumbnails.maxres?.url}
             loading='lazy'
             alt='img'
           />
         </div>
-        <div className='px-2 w-64 md:w-96'>
+        <div className='px-2 w-64 sm:w-64'>
           <h3 className='font-bold overflow-hidden overflow-ellipsis whitespace-nowrap'>
             {title}
           </h3>
