@@ -9,7 +9,7 @@ const Recommendation = ({ info }) => {
       <div className='flex items-center rounded-xl w-full'>
         <div className=''>
           <img
-            className='w- lg:w-44 rounded-xl'
+            className='w-44 rounded-xl'
             src={thumbnails.maxres?.url}
             loading='lazy'
             alt='img'
