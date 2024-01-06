@@ -9,16 +9,17 @@ const Recommendation = ({ info }) => {
       <div className='flex items-center rounded-xl w-full'>
         <div className=''>
           <img
-            className='w-36 lg:w-44 rounded-xl'
+            className='w- lg:w-44 rounded-xl'
             src={thumbnails.maxres?.url}
             loading='lazy'
             alt='img'
           />
         </div>
-        <div className='px-2 max-w-52 w-52 sm:w-64'>
+        <div className='px-3 max-w-52 w-52 sm:w-64 '>
           <h3 className='font-bold overflow-hidden overflow-ellipsis whitespace-nowrap'>
             {title}
           </h3>
+          <h3 className='text-xs text-gray-600 flex-wrap'>{channelTitle}</h3>
           <h3 className='text-xs text-gray-600 flex-wrap'>{channelTitle}</h3>
           <h3 className='text-xs text-gray-600 flex-wrap'>
             {statistics.viewCount}
