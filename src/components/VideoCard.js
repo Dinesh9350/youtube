@@ -1,5 +1,5 @@
 import React from 'react';
-import placeholderimg from '../images/placeholder_img.jpg';
+import ytplaceholderimg from '../images/yt_placeholderimg.jpg';
 
 const VideoCard = ({ info }) => {
   const { snippet, statistics } = info;
@@ -8,7 +8,7 @@ const VideoCard = ({ info }) => {
     <div className=' mt-2 sm:mb-0 mb-3 sm:m-2 sm:w-80 rounded-lg '>
       <img
         className='sm:rounded-lg'
-        src={thumbnails ? thumbnails.medium?.url : placeholderimg}
+        src={thumbnails ? thumbnails.medium?.url : ytplaceholderimg}
         loading='lazy'
         alt='thumbnail'
       />

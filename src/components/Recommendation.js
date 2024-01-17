@@ -1,4 +1,5 @@
 import React from 'react';
+import ytplaceholderimg from '../images/yt_placeholderimg.jpg';
 
 const Recommendation = ({ info }) => {
   const { snippet, statistics } = info;
@@ -10,7 +11,7 @@ const Recommendation = ({ info }) => {
         <div className=''>
           <img
             className='w-36 rounded-xl'
-            src={thumbnails.meduim?.url}
+            src={thumbnails ? thumbnails.medium?.url : ytplaceholderimg}
             loading='lazy'
             alt='img'
           />

@@ -14,11 +14,13 @@ const Header = () => {
           src='https://cdn.iconscout.com/icon/free/png-512/free-hamburger-menu-462145.png?f=webp&w=256'
           alt='hambruger menu'
         />
-        <img
-          className='h-16'
-          src='https://1000logos.net/wp-content/uploads/2017/05/Youtube-logo.jpg'
-          alt='yt'
-        />
+        <Link href='/'>
+          <img
+            className='h-16'
+            src='https://1000logos.net/wp-content/uploads/2017/05/Youtube-logo.jpg'
+            alt='yt'
+          />
+        </Link>
       </div>
       <div className='md:col-span-10 sm:col-span-4 hidden sm:block'>
         <div className='lg:pl-40  md:pl-24 flex text-center items-center'>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy } from 'react';
 // import { YT_VIDEO_API } from '../utils/constants';
 import VideoCard from './VideoCard';
 import { Link } from 'react-router-dom';
@@ -11,7 +11,9 @@ const VideoContainer = () => {
   // if (videos?.length === 0) {
   //   return <Shimmer />;
   // }
-  return !videos ? (<Shimmer />) :  (
+  return !videos ? (
+    <Shimmer />
+  ) : (
     <div className='flex justify-center items-start flex-wrap sm:mt-5'>
       {videos?.map((video) => (
         <Link key={video.id} to={'/watch?v=' + video.id}>
