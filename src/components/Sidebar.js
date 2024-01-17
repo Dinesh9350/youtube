@@ -12,6 +12,7 @@ const Sidebar = () => {
             <img
               className='h-8 mr-5'
               src='https://th.bing.com/th/id/OIP.O23pWqRhxVaXwaMtN1j9vQHaHa?pid=ImgDet&rs=1'
+              loading='lazy'
               alt='home'
             />
             <h3 className='w-40 '>Home</h3>

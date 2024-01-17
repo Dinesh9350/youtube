@@ -5,12 +5,12 @@ const VideoCard = ({ info }) => {
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
   return (
-    <div className='mt-2 sm:mb-0 mb-3 sm:m-2 sm:w-80 rounded-lg'>
+    <div className=' mt-2 sm:mb-0 mb-3 sm:m-2 sm:w-80 rounded-lg '>
       <img
         className='sm:rounded-lg'
-        src={thumbnails ? thumbnails.high?.url : placeholderimg}
+        src={thumbnails ? thumbnails.medium?.url : placeholderimg}
         loading='lazy'
-        alt=''
+        alt='thumbnail'
       />
       <ul className='px-5 py-2 mb-2'>
         <li className='font-semibold flex-wrap'>{title}</li>
