@@ -10,7 +10,7 @@ const Recommendation = ({ info }) => {
         <div className=''>
           <img
             className='w-36 rounded-xl'
-            src={thumbnails.maxres?.url}
+            src={thumbnails.meduim?.url}
             loading='lazy'
             alt='img'
           />
