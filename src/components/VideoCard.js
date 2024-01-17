@@ -4,12 +4,11 @@ import placeholderimg from '../images/placeholder_img.jpg';
 const VideoCard = ({ info }) => {
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
-  console.log(thumbnails);
   return (
     <div className='mt-2 sm:mb-0 mb-3 sm:m-2 sm:w-80 rounded-lg'>
       <img
         className='sm:rounded-lg'
-        src={thumbnails ? thumbnails.maxres?.url : placeholderimg}
+        src={thumbnails ? thumbnails.high?.url : placeholderimg}
         loading='lazy'
         alt=''
       />
