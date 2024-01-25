@@ -26,7 +26,7 @@ const WatchPage = () => {
               src={
                 'https://www.youtube.com/embed/' +
                 search +
-                '?si=gAcf9AuUqIP_p-0f'
+                'rel=0&amp;autoplay=1'
               }
               title='YouTube video player'
               frameBorder='0'
@@ -39,7 +39,7 @@ const WatchPage = () => {
               src={
                 'https://www.youtube.com/embed/' +
                 search +
-                '?si=gAcf9AuUqIP_p-0f'
+                '?si=gAcf9AuUqIP_p-0f?rel=0&amp;autoplay=1'
               }
               title='YouTube video player'
               frameBorder='0'
