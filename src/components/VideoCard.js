@@ -5,10 +5,10 @@ const VideoCard = ({ info }) => {
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
   return (
-    <div className=' mt-2 sm:mb-0 mb-3 sm:m-2 sm:w-80 rounded-lg '>
+    <div className='mt-2 sm:mb-0 mb-3 sm:m-2 sm:w-80 rounded-lg '>
       <img
         className='sm:rounded-lg'
-        src={thumbnails ? thumbnails.medium?.url : ytplaceholderimg}
+        src={thumbnails ? thumbnails.maxres?.url : ytplaceholderimg}
         loading='lazy'
         alt='thumbnail'
       />
