@@ -15,7 +15,7 @@ const WatchPage = () => {
   const search = searchParams.get('v');
 
   return (
-    <div className='p-0 xl:p-5 w-full'>
+    <div className='m-0 p-0 xl:p-5 w-full'>
       <div className='xl:flex items-start'>
         <div className='container w-9/12'>
           {window.innerWidth > 1000 ? (
@@ -50,7 +50,7 @@ const WatchPage = () => {
         </div>
         <div className='xl:w-7/12'>
           {videos?.map((video) => {
-            return <Recommendation info={video} />;
+            return <Recommendation key={video.id} info={video} />;
           })}
         </div>
       </div>
