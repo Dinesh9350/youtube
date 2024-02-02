@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import { closeMenu } from '../utils/appSlice';
 import { useDispatch } from 'react-redux';
 import Recommendation from './Recommendation';
@@ -49,9 +49,11 @@ const WatchPage = () => {
           )}
         </div>
         <div className='xl:w-7/12'>
-          {videos?.map((video) => {
-            return <Recommendation key={video.id} info={video} />;
-          })}
+          {videos?.map((video) => (
+            <Link key={video.id} to={'/watch?v=' + video.id}>
+              <Recommendation info={video} />
+            </Link>
+          ))}
         </div>
       </div>
       <div className='my-5'>comments</div>
