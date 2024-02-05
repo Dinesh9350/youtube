@@ -23,11 +23,7 @@ const WatchPage = () => {
               className='rounded-lg absolute top-0 '
               width='900'
               height='500'
-              src={
-                'https://www.youtube.com/embed/' +
-                search +
-                'rel=0&amp;autoplay=1'
-              }
+              src={'https://www.youtube.com/embed/' + search}
               title='YouTube video player'
               frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
